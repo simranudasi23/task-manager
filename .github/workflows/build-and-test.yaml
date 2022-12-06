@@ -23,6 +23,6 @@ jobs:
           java-version: 17
           distribution: temurin
       - name: Build and test
-        run: ./mvnw -Pfrontend clean package
+        run: chmod +x mvnw && ./mvnw -Pfrontend clean package
       - name: Test frontend
         run: cd src/main/frontend && npm test -- --all --watchAll=false
